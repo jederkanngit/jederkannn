@@ -5,110 +5,159 @@
         <link rel="stylesheet" href="styles.css">
         <meta charset="utf-8">
         <meta name="viewport" content="with=device-with, initial-scale=1">
+        <script type="text/javascript" src="app.js" defer></script>
 
 <title> Jederkann-Galerie </title>
 
     </head>
     <body>
-       
-         <h1>Jederkann-Galerie</h1>
-         <h2> <img src="logo_edited.avif"> <br> Leipziger Platz 9 </h2>
-    
-        <div class="otro">
-            <p>  Jeder kann - <strong> <u>das ist der Punkt.</u></strong>
-                Und aus dieser Überzeugung 
-                heraus schaffen wir kreativen Freiraum, in dem wir Alle unsere
-                Fähigkeiten entfalten können. </p> 
-    
-                <p>Wir glauben an uns, an euch, an jeden Menschen. Wir wollen
-                Anlässe schaffen, um in einen kreativen Austausch zu kommen 
-                - <strong> <i>und einfach machen!</i></strong> </p>
-        </div>
-          
+      
+        <nav>
+            <ul>
+                <button  id="toggle-btn" onclick="toggleSidebar()">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M440-240 200-480l240-240 56 56-183 184 183 184-56 56Zm264 0L464-480l240-240 56 56-183 184 183 184-56 56Z"/></svg>
+                     Menu
+                    </button> 
+                    
+            </ul>
+        </nav>
+
+      <aside id="sidebar">
+         <ul>
+
+             <li>
+                <span class="logo">JederkannZeug</span>
+             </li>
+
+             <li class="active">
+                <a href="index.html">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg>
+                <span>Home</span>
+                </a>
+             </li>
+
+             <li>  
+                <a href="dashboard.html">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M520-600v-240h320v240H520ZM120-440v-400h320v400H120Zm400 320v-400h320v400H520Zm-400 0v-240h320v240H120Zm80-400h160v-240H200v240Zm400 320h160v-240H600v240Zm0-480h160v-80H600v80ZM200-200h160v-80H200v80Zm160-320Zm240-160Zm0 240ZM360-280Z"/></svg>
+                <span>Über uns</span>
+                </a>
+             </li>
+
+             <li>
+                <button onclick=toggleSubMenu(this) class="dropdown-btn">
+                    <span>Lass uns Malen</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+                </button>
+                
+                <ul class="sub-menu">
+                    <li><a href="#">Aktives Malen</a></li>
+                    <li><a href="#">Mehr Events</a></li>
+                </ul>
             
+                
+             </li>
+         
+            <li> 
+                <a href="calendar.html">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Zm280 240q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240Z"/></svg>
+                <span>calendar</span>
+                </a>
+            </li>
+            <li>
+                <a href="Profile.html"></a>
+                <span>Profile</span>
+
+            </li> 
+         </ul>
+      </aside>
+      <main>
+        <h1>Jederkann-Galerie</h1>
+     
+        <div class="headofhead">
+            <div class="head">
+                 <h1>Jederkann</h1> <br>
+                 <h2> <img src="logo_edited.avif"> <br> Leipziger Platz 9 </h2>
+            </div>
+        </div>
+            
+        <div class="cont-otro">
+                <div class="otro">
+                    <br> <br>
+                    <p>  Jeder kann - <strong> <u>das ist der Punkt.</u></strong>
+                        Und aus dieser Überzeugung 
+                        heraus schaffen wir kreativen Freiraum, in dem wir Alle unsere
+                        Fähigkeiten entfalten können. </p> 
+            
+                        <p>Wir glauben an uns, an euch, an jeden Menschen. Wir wollen
+                        Anlässe schaffen, um in einen kreativen Austausch zu kommen 
+                        - <strong> <i>und einfach machen!</i></strong> </p>
+        
+                        <p> Die gemeinsame kreative Arbeit schafft überraschende 
+                            Gemeinsamkeiten. Mach mit! </p>
+                            <br><br>
+                </div>
+        </div>
+                    
+                    <br> <br>
+                
+                <div class="container">
+        
+                <div class="cantainer-i">
+                    <img  src="jederkann-probe.webp" 
+                           width="400" alt="Jederkann-Foto"> 
+                </div>
+        
+                <br> 
+        
+                </div>
+             
+                <br>
+        
+                <div class="colors">
+                    <br> <br><br><br>
+        
+                  <div class="bktxt">
+                    <p> Melde dich bei uns und so verpasst du keine wichtige
+                        Nachrichten über unsre events! </p> 
+                  </div>     
+                        <div class="form-container">
+        
+                            <input class="deineEmail" type="text" placeholder="Deine Email"> 
+                            <br><br>
+                            <button class="boton">  Ich meld mich! </button> 
+        
+                        </div>
+        
+                        <br><br><br><br>
+                </div>           
+            
+                <br>
+                   
+      
+        
             <br> <br>
         
-        <div class="container">
-            <img src="jederkann-probe.webp" border="10" width="400" alt="Centered Image"> 
-        </div>
-     
-            <br> <br>
+        <div class="orele-perro"> 
+        
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam 
+            erat, sed diam voluptua. At vero eos et accusam et justo duo
+             dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+              sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit 
+              amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
+              tempor invidunt ut labore et dolore magna aliquyam erat, sed 
+              diam voluptua. At vero eos et accusam et justo duo dolores et
+               ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
+            est Lorem ipsum dolor sit amet.</p>
+        
+            </div>
+        
 
-       
-            <p> Melde dich bei uns und so verpasst du keine wichtige
-                Nachrichten über unsre events! </p> 
-               
-                <div class="form-container">
 
-                    <input class="deineEmail" type="text" placeholder="Deine Email"> 
-                    <button class="boton">  Ich meld mich! </button> 
+      </main>
 
-                </div>
-                   
-    
-        <br>
-             <p>Hier Findest du infos über unsre etstehung, ziele und weiteres: </p>
-             <br> <br>
-             <button>Über uns</button> <br><br>
-             <button>Kalender</button> <input type="date"> <input type="time">
-<ul>
-    <li>Calender
-        <ul>
-            <li>Calender</li>
-        </ul>
-    </li>
-   <button><li>Über uns</li></button> 
-    <li>Cooles Zeug</li>
-</ul>
-<table border="10" cellpading="10" cellspacing="4">
-    <tr>
-        <th>hallo</th>
-        <th colspan="4">hallo</th>
-        <th>hallo</th>
-    </tr>
-    <tr>
-        <td>November</td>
-        <td>august</td>
-        <td>august</td>
-        <td>august</td>
-        <td>august</td>
-    </tr>
-    <tr>
-        <td rowspan="2">frühling</td>
-        <td>September</td>
-        <td>august</td>
-        <td>august</td>
-        <td>august</td>
-        <td>august</td>
-    </tr>
-    <tr>
-        <td>November</td>
-        <td>august</td>
-        <td>august</td>
-        <td>august</td>
-        <td>august</td>
-    </tr>
-
-</table>
-
-<hr> 
-Unser Instagram <a href="https://www.instagram.com/jederkann.insta/" target="_blank"> @Jederkann.insta</a>
-    <br> <br>
-
-<div class="orele-perro"> 
-
-    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-    nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam 
-    erat, sed diam voluptua. At vero eos et accusam et justo duo
-     dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-      sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit 
-      amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
-      tempor invidunt ut labore et dolore magna aliquyam erat, sed 
-      diam voluptua. At vero eos et accusam et justo duo dolores et
-       ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
-    est Lorem ipsum dolor sit amet.</p>
-
-    </div>
+      <footer>Unser Instagram <a href="https://www.instagram.com/jederkann.insta/" 
+        target="_blank"> @Jederkann.insta</a></footer>
 
 </body>
 </html>
